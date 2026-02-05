@@ -1,0 +1,272 @@
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    /* Space for fixed navbar */
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #F4F4F4 100%);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#D1D5DB 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+    mask-image: linear-gradient(180deg, black 0%, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    max-width: 900px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Fix stretching width */
+    gap: 0.4rem;
+    /* Reduced space between the three lines */
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #fff;
+    padding: 8px 10px;
+    /* Reduced horizontal padding */
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.hero-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 92px;
+    line-height: 1;
+    font-weight: 400;
+    color: #2F2F2F;
+    letter-spacing: -3.68px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.hero-title .highlight-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 82px;
+    background: #FFFFFF;
+    box-shadow: 0px 0.602187px 0.602187px -1.25px rgba(0, 0, 0, 0.14),
+        0px 2.28853px 2.28853px -2.5px rgba(0, 0, 0, 0.13),
+        0px 10px 10px -3.75px rgba(0, 0, 0, 0.05);
+    border-radius: 110px;
+    font-family: inherit;
+    color: #9222E4;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+    border: none;
+}
+
+.hero-subtitle {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 92px;
+    line-height: 1;
+    font-weight: 400;
+    color: #2F2F2F;
+    letter-spacing: -3.68px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.purple-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 423px;
+    height: 82px;
+    background: rgba(192, 46, 255, 0.29);
+    box-shadow: 0px 0.602187px 0.602187px -1.25px rgba(0, 0, 0, 0.09),
+        0px 2.28853px 2.28853px -2.5px rgba(0, 0, 0, 0.08),
+        0px 10px 10px -3.75px rgba(0, 0, 0, 0.03);
+    border-radius: 110px;
+    color: #2F2F2F;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.outline-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3.5rem;
+    height: 82px;
+    background: white;
+    border: 2.3px solid #C02EFF;
+    border-radius: 110px;
+    color: #2F2F2F;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.hero-description {
+    font-family: 'Satoshi', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: #555;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 1rem;
+    /* Moved button up */
+    margin-top: 0.5rem;
+    /* Reduced gap */
+    text-align: left;
+}
+
+/* Download Button Styles */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #C02EFF;
+    /* Updated User Purple */
+    color: white;
+    padding: 1rem 1rem;
+    /* Reduced horizontal padding */
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #C02EFF;
+    min-width: 180px;
+    /* Reduced min-width */
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(192, 46, 255, 0.3);
+}
+
+.btn-icon-circle {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #BF55EC;
+    /* Purple Arrow */
+    transition: all 0.3s ease;
+}
+
+/* Hover State */
+.btn-primary:hover {
+    background-color: white;
+    color: #BF55EC;
+}
+
+.btn-primary:hover .btn-icon-circle {
+    background-color: #BF55EC;
+    color: white;
+}
+
+
+/* Right Side Image & Tilt Effect */
+.hero-image-container {
+    position: relative;
+    padding: 0;
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    /* Needed for 3D tilt */
+}
+
+
+.profile-card {
+    position: relative;
+    background: transparent;
+    overflow: visible;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    z-index: 2;
+    aspect-ratio: 4/5;
+}
+
+.profile-img {
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+}
+
+@keyframes tilt-left {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.profile-card:hover .profile-img {
+    transform: rotate(-10deg);
+}
+
+.zigzag-bg {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.zigzag-bg img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* Background decorations */
+/* The "backside" shape behind the profile */
+/* Hide old shapes if needed, or reuse */
+.purple-shape {
+    display: none;
+}

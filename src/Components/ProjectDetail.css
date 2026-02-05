@@ -1,0 +1,558 @@
+.project-detail-page {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 120px 80px 80px;
+}
+
+/* Dark Theme Overrides */
+.project-detail-page.dark-theme {
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+.project-detail-page.dark-theme .detail-title,
+.project-detail-page.dark-theme .meta-item h3,
+.project-detail-page.dark-theme .detail-section h2,
+.project-detail-page.dark-theme .detail-list li,
+.project-detail-page.dark-theme .detail-list li::before,
+.project-detail-page.dark-theme .solution-item strong,
+.project-detail-page.dark-theme .process-step p,
+.project-detail-page.dark-theme .core-colors h4,
+.project-detail-page.dark-theme .gradient-info h4 {
+    color: #ffffff;
+}
+
+.project-detail-page.dark-theme .meta-item p,
+.project-detail-page.dark-theme .overview-section p,
+.project-detail-page.dark-theme .solution-item span {
+    color: #cccccc;
+}
+
+.project-detail-page.dark-theme .process-step h3 {
+    color: #F9F58B;
+    /* Yellow for step titles in dark mode */
+}
+
+.project-detail-page.dark-theme .step-arrow {
+    color: #ffffff;
+}
+
+/* Common Styles */
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.detail-title {
+    font-size: 3.5rem;
+    /* Slightly reduced to fit longer titles better */
+    font-weight: 600;
+    margin: 0;
+    color: #1a1a1a;
+    flex: 1;
+    /* Allow title to grow and fill space */
+}
+
+.view-website-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #c02eff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.view-website-btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    background: white;
+    color: #c02eff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.detail-hero-image {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+    height: 700px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.detail-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.detail-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.detail-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.meta-item h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.meta-item p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.detail-section h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.overview-section p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
+
+.problem-solution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-list li {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+    color: #1a1a1a;
+}
+
+.detail-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+}
+
+.design-process-flex {
+    display: flex;
+    justify-content: space-between;
+    /* Push visuals far right */
+    gap: 80px;
+    margin-bottom: 120px;
+    align-items: flex-start;
+    /* Lifted up */
+}
+
+.design-visuals {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    /* Minimum gap as requested */
+    margin-top: -40px;
+    /* Shifted up more */
+    align-items: stretch;
+    margin-left: auto;
+    /* Forces the entire block to the right */
+    flex: none;
+    /* Prevents growing/shrinking to maintain fixed sizing */
+    position: sticky;
+    top: 120px;
+}
+
+.process-steps {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.process-step h3 {
+    font-size: 2.22rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #c02eff;
+    display: flex;
+    align-items: flex-start;
+    /* Align to top */
+    gap: 15px;
+}
+
+.step-arrow {
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-top: 8px;
+    /* Moved down further */
+    line-height: 1;
+}
+
+.process-step p {
+    font-size: 1.22rem;
+    color: #1a1a1a;
+    margin: 0;
+    padding-left: 40px;
+}
+
+.design-box {
+    background: white;
+    flex: none;
+    /* Exact Figma sizing */
+    width: 386.5px;
+    height: 521px;
+    min-width: 0;
+    border-radius: 22px;
+    /* Figma curve */
+    opacity: 0.6;
+    /* Applied translucency */
+    overflow: hidden;
+}
+
+.design-box.typography {
+    background: linear-gradient(153.75deg, #198754 -30.89%, #FFFFFF 74.66%);
+    padding: 30px 25px;
+    position: relative;
+}
+
+.design-box.colors {
+    background: linear-gradient(153.16deg, #FFFFFF 43.45%, #198754 150.09%);
+    padding: 30px 40px;
+}
+
+.box-header {
+    padding: 30px 40px;
+}
+
+.box-header h3 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.typo-preview {
+    padding: 0 25px 40px;
+    position: relative;
+}
+
+.main-font {
+    font-size: 6rem;
+    /* Scaled down */
+    font-weight: 600;
+    color: #198754;
+    margin-bottom: 25px;
+    line-height: 1;
+}
+
+.font-variants {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.variant {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.variant-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.alphabet {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #4a4a4a;
+}
+
+.giant-aa {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    font-size: 13rem;
+    /* Slightly smaller watermark */
+    font-weight: 600;
+    color: #198754;
+    opacity: 0.08;
+    /* Extremely subtle */
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.design-box.colors .box-header {
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.design-box.colors .box-header h3 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #198754;
+}
+
+.colors-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.core-colors h4,
+.gradient-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.color-row {
+    display: flex;
+    gap: 20px;
+}
+
+.color-info-box {
+    flex: 1;
+    height: 60px;
+    /* Shorter boxes */
+    border-radius: 12px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.color-info-box.primary {
+    background: #198754;
+}
+
+.color-info-box.secondary {
+    background: #A1A1A1;
+}
+
+.color-info-box .label {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}
+
+.color-info-box .hex {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.gradient-bar {
+    width: 100%;
+    height: 80px;
+    /* Shorter bar */
+    border-radius: 12px;
+    background: linear-gradient(to right, #198754, #A1A1A1);
+    position: relative;
+    padding: 15px;
+    color: white;
+    font-size: 0.9rem;
+    display: flex;
+    /* Back to flex for alignment */
+    align-items: flex-end;
+}
+
+.hex-start {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-weight: 500;
+}
+
+.hex-end {
+    margin-left: auto;
+    font-weight: 500;
+}
+
+.key-features-section {
+    padding-top: 80px;
+    border-top: 1px solid #ddd;
+}
+
+.project-detail-error {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0d0d0d;
+    color: white;
+}
+
+.detail-secondary-image {
+    width: 100%;
+    max-width: 1400px;
+    margin: 80px auto;
+    border-radius: 40px;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.detail-secondary-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .detail-secondary-image {
+        border-radius: 20px;
+        margin: 40px auto;
+    }
+}
+
+.solution-item {
+    margin-bottom: 25px;
+}
+
+.solution-item strong {
+    display: block;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.solution-item span {
+    line-height: 1.6;
+    display: block;
+    color: #444;
+}
+
+.check-list li {
+    padding-left: 35px !important;
+}
+
+.check-list li::before {
+    content: "✔" !important;
+    color: #c02eff !important;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .design-process-flex {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .design-visuals {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .project-detail-page {
+        padding: 100px 40px 80px;
+    }
+
+    .detail-title {
+        font-size: 2.8rem;
+    }
+
+    .detail-section h2 {
+        font-size: 3rem;
+    }
+
+    .meta-item h3 {
+        font-size: 2rem;
+    }
+
+    .problem-solution-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .detail-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .detail-hero-image {
+        height: 400px;
+        margin-bottom: 60px;
+    }
+
+    .design-box {
+        width: 100%;
+        max-width: 386.5px;
+        height: auto;
+        min-height: 521px;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .design-visuals {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.detail-screens-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 80px auto;
+}
+
+.detail-screen-image {
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.detail-screen-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

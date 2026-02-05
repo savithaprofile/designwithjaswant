@@ -1,0 +1,114 @@
+.skills-section {
+    background-color: #F5F5F7;
+    color: #111;
+    padding: 6rem 0;
+}
+
+.skills-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: #111;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.skill-pill {
+    background-color: #E5E7EB;
+    color: #374151;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: background-color 0.2s;
+}
+
+.skill-pill:hover {
+    background-color: #D1D5DB;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    background-color: #E5E5E5;
+    /* Light gray card background */
+    border-radius: 24px;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform 0.2s;
+}
+
+.tool-card.purple-card {
+    background: linear-gradient(135deg, #C084FC, #A855F7);
+    color: white;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    width: 80px;
+    /* Reduced from 105px */
+    height: 80px;
+    /* Reduced from 105px */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.tool-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.figma-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.75);
+    /* Further reduced scale to match visual weight */
+    transform-origin: center center;
+    clip-path: inset(0 0 8% 0);
+    /* Cuts off the bottom 8% to remove the black line */
+}
+
+.notion-logo-img {
+    transform: scale(0.75);
+    transform-origin: center center;
+}
+
+
+.tool-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tool-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.tool-card.purple-card .tool-info p {
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+}

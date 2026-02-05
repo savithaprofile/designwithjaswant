@@ -1,0 +1,341 @@
+.contact-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2rem 0 0rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', sans-serif;
+}
+
+.contact-container {
+    width: 100%;
+    padding: 0 5%;
+}
+
+/* Status Bar */
+.contact-status-bar {
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.dot.pulse {
+    width: 10px;
+    height: 10px;
+    background-color: #C02EFF;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(192, 46, 255, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(192, 46, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(192, 46, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(192, 46, 255, 0);
+    }
+}
+
+.back-to-top {
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-to-top:hover {
+    color: #ffffff;
+}
+
+.arrow-up {
+    background: #ffffff;
+    color: #000000;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Main Content Flex */
+.contact-main-flex {
+    display: flex;
+    gap: 4rem;
+    padding-top: 4rem;
+    align-items: flex-start;
+}
+
+.contact-content-left {
+    flex: 1.2;
+}
+
+.contact-main-title {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.dot-purple {
+    color: #C02EFF;
+}
+
+.contact-subtext {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* Social Pill */
+.social-pill {
+    background: linear-gradient(#111111, #111111) padding-box,
+        linear-gradient(to right, rgba(255, 255, 255, 0.8), #C02EFF) border-box;
+    border: 1.5px solid transparent;
+    border-radius: 100px;
+    display: inline-flex;
+    padding: 8px;
+    /* Reduced padding for circular children */
+    gap: 12px;
+    align-items: center;
+}
+
+.social-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.08);
+    /* Subtle 'light blackround' background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: #C02EFF;
+    /* Brand purple on hover */
+    color: #ffffff;
+}
+
+.social-link i {
+    display: flex;
+    /* Helps centering */
+}
+
+.behance-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Form Card */
+.contact-form-card {
+    flex: 1;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 4rem 3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group label {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(45, 45, 45, 1);
+    border: 1.5px solid transparent;
+    /* Prepare for focus border */
+    border-radius: 12px;
+    padding: 18px 20px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Purple Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #C02EFF;
+    box-shadow: 0 0 10px rgba(192, 46, 255, 0.3);
+}
+
+.submit-btn-pill {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 100px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 60%;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.submit-btn-pill:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Footer Section */
+.contact-footer {
+    border-top: 1.5px solid rgba(255, 255, 255, 0.2);
+    /* Edge-to-edge gray line */
+    margin-top: 6rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 3rem 0;
+}
+
+.footer-left-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+.footer-right-author {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal alignment */
+    align-items: center;
+    gap: 15px;
+}
+
+.created-by-text {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+.author-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 16px 6px 6px;
+    border-radius: 100px;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-weight: 500;
+}
+
+/* Success Popup */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.success-popup {
+    background: #111111;
+    border: 1px solid rgba(192, 46, 255, 0.3);
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-main-flex {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .contact-main-title {
+        font-size: 3.5rem;
+    }
+
+    .contact-form-card {
+        width: 100%;
+    }
+}
